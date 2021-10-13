@@ -37,7 +37,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class DisplayComponent implements OnInit {
   // name = new FormControl(''); 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'delete'];
   dataSource = ELEMENT_DATA;
 
 
