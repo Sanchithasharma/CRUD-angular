@@ -1,43 +1,43 @@
-<h1>RCUD APP</h1>
+<h1>CRUD APP</h1>
 
 <div fxLayout="row">
-    <!-- <mat-card>
+    <mat-card>
         <mat-card-title> Create </mat-card-title>
-        <form class="example-form" align="center">
-            <mat-form-field class="example-full-width" appearance="fill">
+        <form class="example-form" [formGroup]="profileForm" (ngSubmit)="onSubmit()" align="center">
+            <mat-form-field class="example-full-width" appearance="standard">
               <mat-label>First Name:</mat-label>
-              <input matInput value="">
+              <input matInput id="firstName" formControlName="first_name" required>
             </mat-form-field>
 
-            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-form-field class="example-full-width" appearance="standard">
               <mat-label>Last Name:</mat-label>
-              <input matInput value="">
+              <input matInput formControlName="last_name" required>
             </mat-form-field>
 
-            <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Age:</mat-label>
-              <input matInput>
+            <mat-form-field class="example-full-width" appearance="standard">
+              <mat-label>Gender:</mat-label>
+              <input formControlName="gender" matInput required>
             </mat-form-field>
 
-            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-form-field class="example-full-width" appearance="standard">
               <mat-label>E-mail:</mat-label>
-              <input matInput placeholder="Ex. San Francisco">
+              <input matInput formControlName="email" placeholder="Ex. abc@gmail.com" required>
             </mat-form-field>
 
-            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-form-field class="example-full-width" appearance="standard">
               <mat-label>Phone number:</mat-label>
-              <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
-              <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+              <input matInput #postalCode formControlName="phone_number" maxlength="10" placeholder="Ex. 9410500000" required>
+              <mat-hint align="end">{{postalCode.value.length}} / 10</mat-hint>
             </mat-form-field>
             <button mat-raised-button color="primary">Submit</button>
 
           </form>
 
-    </mat-card> -->
-    <mat-card>
+    </mat-card>
+    <!-- <mat-card>
       <app-display></app-display>
 
-    </mat-card>
+    </mat-card> -->
 </div>
 
 
