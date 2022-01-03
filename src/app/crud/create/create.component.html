@@ -16,7 +16,11 @@
 
             <mat-form-field class="example-full-width" appearance="standard">
               <mat-label>Gender:</mat-label>
-              <input formControlName="gender" matInput required>
+              <select matNativeControl required>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+              </select>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="standard">
@@ -24,7 +28,7 @@
               <input matInput formControlName="email" placeholder="Ex. abc@gmail.com" required>
             </mat-form-field>
 
-            <mat-form-field class="example-full-width" appearance="standard">
+            <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Phone number:</mat-label>
               <input matInput #postalCode formControlName="phone_number" maxlength="10" placeholder="Ex. 9410500000" required>
               <mat-hint align="end">{{postalCode.value.length}} / 10</mat-hint>

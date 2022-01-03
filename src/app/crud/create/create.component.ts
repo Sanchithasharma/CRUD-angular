@@ -23,10 +23,10 @@ export class CreateComponent implements OnInit {
   
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
+    console.warn(this.profileForm);
     this.peopleService.people.push(this.profileForm.value)
     console.table(this.peopleService.people)
-    // this.router.navigate(['/home']);
+    this.router.navigate(['/display']);
 
   }
 
