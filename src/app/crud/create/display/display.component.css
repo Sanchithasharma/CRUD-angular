@@ -5,3 +5,9 @@ table {
     height: 500px;
     overflow: auto;
   }
+
+  .add-more-button {
+    display: flex;
+    justify-content: end;
+    padding: 2%;
+  }

@@ -1,6 +1,9 @@
 import { DataSource } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
 import { PeopleService } from 'src/app/people.service';
+import {Router} from '@angular/router';
+
+
 export interface PeopleList {
   firstName: string;
   lastName: string;
@@ -46,7 +49,7 @@ export class DisplayComponent implements OnInit {
   person: any
 
 
-  constructor(private peopleService: PeopleService) { }
+  constructor(private peopleService: PeopleService, private router: Router) { }
 
 
   ngOnInit(): void {
@@ -56,6 +59,12 @@ export class DisplayComponent implements OnInit {
     this.dataSource = this.peopleService.people;
     this.person = this.dataSource[0].first_name
     console.log(this.person)
+  }
+
+  goBackToCreate(): any  {
+    console.log('edit')
+    this.router.navigate(['/create']);
+
   }
 
 }
